@@ -1,0 +1,28 @@
+<index:>
+  <div class="container">
+
+    <h1>Информация:</h1>
+    {{if _session.loggedIn}}
+      <p>Пользователь вошел в систему</p>
+
+
+      <h2>Локальная стратегия:</h2>
+      {{if _page.user.local}}
+        <p>Имя пользователя: <b>{{_page.user.local.username}}</b></p>
+      {{else}}
+        <p>Данные отсутствуют</p>
+      {{/}}
+
+      <h2>GitHub:</h2>
+      {{if _page.user.github}}
+        <p>Имя пользователя: <b>{{_page.user.github.username}}</b></p>
+      {{else}}
+        <p>Данные отсутствуют</p>
+      {{/}}
+
+      <a class="btn btn-danger" href="/logout">Выйти</a>
+    {{else}}
+      <p>Пользователь НЕ вошел в систему</p>
+      Старница <a href="/login">Регистрации/Авторизации</a>
+    {{/}}
+  </div>

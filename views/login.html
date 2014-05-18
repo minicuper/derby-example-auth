@@ -1,0 +1,32 @@
+<index:>
+
+  <view name="signin"></view>
+  <hr/>
+  <view name="signup"></view>
+
+<signin:>
+  <div class="container">
+    <form class="form-signin" role="form" action='/login' method='post'>
+      <h3 class="form-signin-heading">Вход</h3>
+      <input name="username" type="text" class="form-control" placeholder="имя" required="" autofocus="">
+      <input name="password" type="password" class="form-control" placeholder="пароль" required="">
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+      <br/>
+      <a class="btn btn-lg btn-danger btn-block" href="/auth/github">Через GitHub</a>
+    </form>
+  </div>
+
+<signup:>
+  <div class="container">
+    <form class="form-signin" role="form" action='/register' method='post'>
+      <h3 class="form-signin-heading">Регистрация</h3>
+      <input name="username" type="text" class="form-control" placeholder="имя" required="" autofocus="">
+      <input name="email" type="email" class="form-control" placeholder="имеил" required="">
+      <input name="password" type="password" class="form-control" placeholder="пароль" required="">
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+
+
